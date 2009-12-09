@@ -1,0 +1,164 @@
+% -*- coding: utf-8 -*-
+%
+% do 
+%    fc-list | egrep Minion
+% to get names of Minion fonts installed on the system
+% 
+% do
+%    otfinfo --postscript-name MinionPro-Regular.otf
+% to get PostScript name of the font
+% do 
+%    otfinfo --features MinionPro-Regular.otf
+% to list features present in the font
+% (lcdf-typetools contains otfinfo and other useful tools)
+
+\magnification 1800
+\nopagenumbers
+
+\font\rmMinion "Minion Pro/Regular:mapping=mex-text,+onum"
+\font\itMinion "Minion Pro/Italic"
+\font\bfMinion "Minion Pro/Bold"
+\font\biMinion "URW Bookman L/R"
+
+\let\rm=\rmMinion
+\let\it=\itMinion
+\let\bf=\bfMinion
+\let\bi=\biMinion
+
+%\font\titleFont "Comic Sans MS/Bold" at 14pt
+\font\titleFont "Minion Pro/Bold"
+\def\title#1{\bigbreak{\special{color rgb 0 0 0.2}\titleFont#1\special{color rgb 0 0 0}}\bigskip}
+
+\raggedright
+\raggedbottom
+\parindent 0pt
+\parskip 6pt
+
+\rm
+
+\input multido
+
+% --------
+
+\title{Polish Diacritics}
+
+\halign{\quad#\hfil&\quad#\hfil&\quad\hfil#\hfil&\qquad#\hfil&\quad#\hfil&\quad#\hfil\cr
+  \it Name& \it U+0000&&\it Name& \it U+0000&\cr\noalign{\smallskip\hrule\smallskip}
+  Aogonek& 0104&Ą&  aogonek&0105&ą\cr
+  Cacute&  0106&Ć&  cacute& 0107&ć\cr
+  Eogonek& 0118&Ę&  eogonek&0119&ę\cr
+  Lslash&  0141&Ł&  lslash& 0142&ł\cr
+  Nacute&  0143&Ń&  Nacute& 0144&ń\cr
+  Oacute&  00D3&Ó&  oacute& 00F3&ó\cr
+  Sacute&  015A&Ś&  sacute& 015B&ś\cr
+  Zacute&  0179&Ź&  zacute& 017A&ź\cr
+  Zdotaccent&017B&Ż&  zdotaccent&017C&ż\cr}
+
+Roman: {\rm AaBbCc}  
+
+Italic: {\it AaBbCc}
+
+Bold: {\bf AaBbCc}
+
+Bold Italic: {\bi AaBbCc}
+
+\fontname\rm
+
+\fontname\it
+
+\fontname\bf
+
+\fontname\bi
+
+
+\title{Plain macros} 
+
+\dots 
+
+\ss \AA \aa \AE \ae \OE \oe \O \o
+
+\dag \ddag \S \P -- ---
+
+,,Polish quotation marks''  
+
+<<guillemet left and guillemet right>>
+
+
+\title{Some Polish text} 
+
+{\bf Donald Knuth} swoimi książkami stworzył podstawy nowej dziedziny, zwanej
+,,typografią cyfrową'' (ang. {\it digital typography\/}),
+wypełnionej pudełkami, wymiarami, klejami (które mogą się kurczyć
+i~rozciągać; jeśli potrzeba, to nawet nieskończenie).
+Są tu nawet kary, marność i~wadliwość.
+
+
+\title{Some cyrillic letters} 
+
+\special{color rgb 1.0 0 0} явертюиопасдфгхйклзхцвбнмд№
+
+
+
+\special{color rgb 0 0 0}
+
+\title{Ornaments}
+
+{\special{color rgb 0.3 0.3 0}
+
+\multido{\i=57525+1}{13}{\char\i }
+
+\multido{\i=57540+1}{11}{\char\i }
+
+\multido{\i=57552+1}{5}{\char\i }
+
+\char57558
+
+}
+
+{\font \ornmM "MinionPro-Regular:+ornm"
+\ornmM qwertyuioplkjhgfdsazxcvbnm 1234567890
+}
+
+{\font \ornmSS "MinionPro-Regular:+ss01"
+\ornmSS qwertyuioplkjhgfdsazxcvbnm
+}
+
+\break
+
+
+\title{All Minion Features}
+
+\halign{\quad#\hfil\qquad&\qquad#\hfil\cr
+aalt&   Access All Alternates\cr
+c2sc&   Small Capitals From Capitals\cr
+case&   Case-Sensitive Forms\cr
+cpsp&   Capital Spacing\cr
+dlig&   Discretionary Ligatures\cr
+dnom&   Denominators\cr
+fina&   Terminal Forms\cr
+frac&   Fractions\cr
+hist&   Historical Forms\cr
+kern&   Kerning\cr
+liga&   Standard Ligatures\cr
+lnum&   Lining Figures\cr
+numr&   Numerators\cr
+onum&   Oldstyle Figures\cr
+ordn&   Ordinals\cr
+ornm&   Ornaments\cr
+pnum&   Proportional Figures\cr
+salt&   Stylistic Alternates\cr
+sinf&   Scientific Inferiors\cr
+size&   Optical Size\cr
+smcp&   Small Capitals\cr
+ss01&   Stylistic Set 1\cr
+ss02&   Stylistic Set 2\cr
+sups&   Superscript\cr
+tnum&   Tabular Figures\cr
+zero&   Slashed Zero\cr}
+
+\end
+
+\font\rmMinion "MinionPro-Regular:mapping=mex-text,+onum"
+\font\itMinion "MinionPro-It::+onum"
+\font\bfMinion "MinionPro-Bold::+onum"
+\font\biMinion "MinionPro-BoldIt::+onum"

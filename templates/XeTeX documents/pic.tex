@@ -1,0 +1,108 @@
+%&program=xetex
+%&encoding=UTF-8 Unicode
+
+\baselineskip=14pt
+\tolerance=2000
+\font\tenrm="Minion Pro" at 10pt \tenrm
+\font\bigbold="Minion Pro/B" at 24pt
+\def\TeX{T\lower.5ex\hbox{\kern-.1667em E}\kern-.125em X}
+\def\XeTeX{X\kern-.1667em\lower.5ex\hbox{Ǝ}\kern-.15em \TeX}
+\centerline{\bigbold Pictures in \XeTeX}
+\smallskip
+\centerline{\XeTeXpicfile "xetex.jpg"}
+\smallskip
+\def\\{\char`\\}
+
+This file demonstrates simple use of the \\XeTeXpicfile command
+in \XeTeX\ to include pictures in a typeset document.  When \XeTeX\
+reads a picture file using \\XeTeXpicfile, it knows the dimensions of
+the picture, which means it is possible to use macros to automatically
+create a suitable “hole” in the text for the picture to go in.
+
+\def\leftpicpar#1{\setbox0=\hbox{\XeTeXpicfile #1}%
+  \dimen0=\wd0 \advance\dimen0 by 3pt
+  \count255=\ht0 \advance\count255 by \baselineskip
+    \divide\count255 by \baselineskip
+  \hangindent\dimen0 \hangafter-\count255
+  \noindent\llap{\vbox to 0pt{\kern-0.7\baselineskip\box0\vss}\kern3pt}%
+  \indent\ignorespaces}
+
+\leftpicpar{"xetex.jpg" scaled 400}
+This shows one possible approach (rather crudely implemented) for
+formatting text to fit around a picture, making use of \XeTeX’s
+ability to measure the picture file.  In practice, it would be much
+better to implement some higher-level picture placement macros, with
+simple parameters to control various aspects of positioning and text
+runaround, but this is left as an exercise for the reader.  Now we
+just need enough text to fill several lines, so we can check that it
+wraps around the picture properly.
+
+Note that in versions of \XeTeX\ prior to 0.5, there was a primitive
+simply called \\picfile, which was always enabled. Beginning from
+release 0.5, this command has been renamed \\XeTeXpicfile, and is only
+available when running in “extended” mode (similarly to e-\TeX\
+extensions to the original \TeX\ language). Also, the \\picfile\
+command recognized keywords “xshifted” and “yshifted” for moving the
+image within its box. These keywords are no longer supported, as the
+same effect can be achieved with \TeX\ macros.
+
+There is a similar command \\XeTeXpdffile\ for including pages from
+existing PDF documents as graphics within a \XeTeX\ document.
+
+\bye
+
+
+To support graphics inclusion, XETEX provides the \XeTeXpicfile command.
+Normally, in other TEX systems, this is done with the \special command. How-
+ever, \XeTeXpicfile offers the advantage that XETEX can determine the size of
+the picture, and thus macros can be written to fit the picture to a certain space or
+create the needed space for the picture, bypassing the manual picture-measuring
+process otherwise needed. Specifically, \XeTeXpicfile is used as follows:
+
+       \XeTeXpicfile <filename> [options]
+
+where <filename> is the name (full pathname, or relative to the main document) of
+a graphics file. Most graphic file formats are supported (using QuickTime's Graphic
+Importer facility).
+
+The [options] in the \XeTeXpicfile command use the following keywords:
+
+       width <dimen>
+       height <dimen>
+       scaled <scalefactor>
+       xscaled <scalefactor>
+       yscaled <scalefactor>
+       rotated <degrees>
+
+Scaling and rotation operations are executed in the order specified. If one of width
+or height, but not the other, is specified at any stage, the other dimension is scaled
+in proportion. If both absolute size and scaled are used at the same stage in the
+transformation sequence, not separated by a rotation, the size is set as requested
+and the scale factor is ignored.
+
+The final result of a \XeTeXpicfile command is an object which can be
+included in the text being typeset just like a character, albeit usually a rather large
+one. It could be thought of as a box, though it cannot be unboxed. It can, however,
+be put inside a normal TEX box register, and in fact this is often desirable. After
+saying, for example,
+
+        \box0=\hbox{\XeTeXpicfile "my-pic.jpg" scaled 750 rotated 45}
+
+you can find the dimensions of the graphic by examining the width and height of
+box #. (The depth will always be zero.) Your macros can then arrange to place the
+picture suitably on the page. (See the PicFileSample.tex file.)
+
+There is also a \XeTeXpdffile command. This is similar to \XeTeXpicfile,
+but recognizes an additional option:
+
+        page <number>
+
+This specifies the page to be included from the PDF file (default is the first page).
+Negative numbers can be used to indicate pages relative to the end of the file;
+thus page -2 means the second to last page. The page option, if used, must be
+specified as the first keyword after the filename, before any transformations.
+
+Note that PDF files can also be included by the \XeTeXpicfile command,
+but this has two significant drawbacks: they will be rendered as lower-resolution
+graphics, and only the first page is available.
+

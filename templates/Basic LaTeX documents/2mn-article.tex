@@ -1,0 +1,36 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+% Przykładowy szablon dokumentu XeLaTeX 
+% korzystajacego z klasy „article” oraz pakietu 
+% „fontspec” ułatwiającego wybieranie fontów.
+
+\documentclass[12pt]{article} % domyślne 10pt jest za małe
+
+\usepackage{fontspec} % dokumentacja „fontspec.pdf” 
+\defaultfontfeatures{Mapping=tex-text} % konwencja: -- --- ,, ''
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\setmainfont{DejaVu Serif} % zmień font na „DejaVu Serif”
+
+\usepackage{geometry} % zobacz „geometry.pdf”
+\geometry{a4paper}
+
+\usepackage{graphicx} % polecenie \includegraphics, dokumentacja „epslatex.pdf”
+
+\usepackage[polish]{polyglossia} % najważniejszy pakiet
+
+\title{Krótki tytuł}
+\author{Hieronim Brzęczyszczykiewicz}
+%\date{} % odkomentuj aby usunąć datę lub wstaw jakąś datę między {}
+         % jeśli tego nie zrobisz będzie drukowana aktualna data
+
+\begin{document}
+\maketitle % drukuj tytuł
+
+\section{Pierwsza sekcja}
+
+\subsection{Pierwsza podsekcja}
+
+\end{document}
