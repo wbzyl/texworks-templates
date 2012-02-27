@@ -3,13 +3,14 @@
 
 \documentclass[a4paper,12pt]{article}
 
-\usepackage{fontspec,xunicode}
+\usepackage{fontspec,xunicode,xltxtra}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\usepackage{mathpazo}
 
-\setmainfont{TeX Gyre Bonum}
-%\setsansfont{TeX Gyre Heros}
-%\setmonofont{DejaVu Sans Mono}
+\usepackage{unicode-math}
+\usepackage{amsmath}
+
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{Asana Math}
 
 \begin{document}
 \pagestyle{empty}
@@ -46,3 +47,8 @@ $$
 Please see the complete \emph{fontspec} documentation for further information.
 
 \end{document}
+
+
+Fonty do składania matematyki:
+
+  \usepackage{mathpazo}
