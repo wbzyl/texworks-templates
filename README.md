@@ -1,6 +1,6 @@
 # Szablony dla systemu XeLaTeX
 
-Basic XeLaTeX documents:
+Basic XeLaTeX documents (w katalogu *templates*):
 
 * *fonty-podstawy.tex*
 * *fonty-math.tex*
