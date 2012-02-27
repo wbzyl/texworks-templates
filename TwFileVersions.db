@@ -1,0 +1,21 @@
+950 a33bf3d1515fcdc3844c126c30f378ed configuration/tag-patterns.txt
+950 db43f49313197cff6c2cda819210818f configuration/texworks-config.txt
+950 b0847bafe066c706a556601940472446 configuration/auto-indent-patterns.txt
+950 69225c00f4efd2eca55372eb55b51c9c configuration/smart-quotes-modes.txt
+950 4572ba0aae8cc7851981598dad212305 configuration/delimiter-pairs.txt
+950 1b596a4b3938118e36ef1550c15728b8 scripts/Hooks/babelLanguage.js
+950 c3d60c32c623a51c03ad48f6d794028f scripts/makeBold.py
+950 8f9fb082d218b8ec1fbeeafab2feb6ba scripts/Text transforms/titlecase.js
+950 3bc19d20951e5619b422c319127f19d4 scripts/makeBold.lua
+950 702a3c082d834ec69e709afb1de7a340 scripts/LaTeX styles/toggleBold.js
+950 4fde047514f41ebeda1d338145fdb40a scripts/LaTeX styles/toggleEmph.js
+950 41f66cb18d9fcc848bd29fc928cc7698 completion/tw-beamer.txt
+950 e95d0d9f5b1f61080b395c3225e91158 completion/tw-basic.txt
+950 a8a7a23be0755f3b53437809ce925544 completion/tw-context.txt
+950 aefd25657f85184c49a0516d9ba479b9 templates/Basic LaTeX documents/letter.tex
+950 11e6b64bafe82484122a6b3a8ddcc79e templates/Beamer presentations/generic-ornate-15min-45min.en.tex
+950 79461c4886b040ef0ef0089166ff578c templates/Beamer presentations/speaker_introduction-ornate-2min.en.tex
+950 e8d028009c799d1370aed8d72a14ebb0 templates/Beamer presentations/conference-ornate-20min.en.tex
+950 142a1d0f2c74c2cd883520486d14bd1f templates/More LaTeX classes/memoir.tex
+950 0f68bf0cb0249347aa3ce71339b48b7f templates/More LaTeX classes/KOMA-letter.tex
+950 32d08ecc186b0cd35339538b714de800 templates/XeLaTeX documents/article-fontspec.tex

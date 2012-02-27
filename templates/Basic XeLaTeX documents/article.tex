@@ -1,37 +1,48 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8
 
-% Przykładowy szablon dokumentu XeLaTeX 
-% korzystajacego z klasy „article” oraz pakietu 
-% „fontspec” ułatwiającego wybieranie fontów.
+\documentclass[a4paper,12pt]{article}
 
-\documentclass[12pt]{article} % domyślne 10pt jest za małe
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 
-\usepackage{fontspec} % dokumentacja „fontspec.pdf” 
-\defaultfontfeatures{Mapping=tex-text} % konwencja: -- --- ,, ''
-\usepackage{xunicode}
-\usepackage{xltxtra}
+\setmainfont{TeX Gyre Bonum}
+%\setmainfont{TeX Gyre Termes}
+%\setmmonofont{DejaVu Sans Mono}
 
-\setmainfont{DejaVu Serif} % zmień font na „DejaVu Serif”
+\usepackage{graphicx} % ftp://ftp.tex.ac.uk/tex-archive/info/epslatex.pdf
 
-\usepackage{geometry} % zobacz „geometry.pdf”
-\geometry{a4paper}
-
-\usepackage{graphicx} % polecenie \includegraphics, dokumentacja „epslatex.pdf”
-
-\usepackage{polyglossia} % najważniejszy pakiet
+\usepackage{polyglossia}
 \setdefaultlanguage{polish}
 
-\title{Krótki tytuł}
-\author{Hieronim Brzęczyszczykiewicz}
-%\date{} % odkomentuj aby usunąć datę lub wstaw jakąś datę między {}
-         % jeśli tego nie zrobisz będzie drukowana aktualna data
+\title{Otoczenia \LaTeX-owe}
+\date{28.02.2012}
 
 \begin{document}
-\maketitle % drukuj tytuł
+\pagestyle{empty}
+%\maketitle
+%\tableofcontents
+%\newpage
 
-\section{Pierwsza sekcja}
+\section*{Otoczenia enumerate, itemize}
 
-\subsection{Pierwsza podsekcja}
+Jakiś tekst\ldots
+
+\section*{Otoczenie figure}
+
+Więcej tekstu\ldots, jeszcze więcej tekstu\ldots
+
+\section*{Otoczenie table, tabular}
+
+Więcej tekstu\ldots, jeszcze więcej tekstu\ldots
+
+\section*{Otoczenie verbatim}
+
+Krótkie wstawki ,,verbatim'': \verb|!@#$%^&*|.
+
 
 \end{document}
+
+Otoczenie center
+Deklaracja \centering
+Polecenie \includegraphicsq

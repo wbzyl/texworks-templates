@@ -1,46 +1,46 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8
 
-% Szablon dokumentu XeLaTeX + klasa article + pakiet hyperref
+\documentclass[a4paper,12pt]{article}
 
-\documentclass[12pt]{article} % domyślne 10pt jest za małe
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont{TeX Gyre Bonum}
 
-\usepackage{fontspec} % dokumentacja „fontspec.pdf” 
-\defaultfontfeatures{Mapping=tex-text} % konwencja: -- --- ,, ''
-\usepackage{xunicode}
-\usepackage{xltxtra}
+% polecenie \includegraphics, dokumentacja „epslatex.pdf”
+\usepackage{graphicx}
 
-\setmainfont{DejaVu Serif} % zmień font na „DejaVu Serif”
-                           % font powinien byc zainstalowany w systemie?
-
-\usepackage{geometry} % dokumentacja „geometry.pdf”
-\geometry{a4paper}
-
-\usepackage{hyperref} % wstaw odsyłacze
-
-\usepackage{graphicx} % polecenie \includegraphics, dokumentacja „epslatex.pdf”
-
-\usepackage{polyglossia} % najważniejszy pakiet
+\usepackage{polyglossia}
 \setdefaultlanguage{polish}
 
-\title{Historia mojej rodziny}
-\author{Hieronim Brzęczyszczykiewicz}
-%\date{} % odkomentuj aby usunąć datę lub wstaw jakąś datę między {}
-         % jeśli tego nie zrobisz będzie drukowana aktualna data
+% odsyłacze
+\usepackage{hyperref}
+
+\title{Pakiet hyperref}
+\date{28.02.2012}
 
 \begin{document}
-\maketitle         % drukuj tytuł
+\maketitle
+\tableofcontents
 
-\tableofcontents   % drukuj spis treści
-
+\newpage
 \section{Pierwsza sekcja}
 
-Akapity oddzielamy
+Odsyłacze do dokumentacji:
 
-pustym wierszem.
+\begin{itemize}
+\item \href{ftp://sunsite.icm.edu.pl/pub/CTAN/macros/latex/contrib/hyperref/doc/manual.html#x1-130004}{Additional user macros}
+\end{itemize}
 
-\subsection{Pierwsza podsekcja}
+\subsection{Cross-references}
 
-Więcej tekstu.
+W drugiej sekcji, na str.~\pageref{crossref},
+jest więcej informacji na ten temat.
+
+\newpage
+\section{Druga sekcja}
+
+Na razie tutaj jeszcze nic nie ma.\label{crossref}
+
 
 \end{document}

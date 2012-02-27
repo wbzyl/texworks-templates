@@ -1,23 +1,26 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt]{article}
-\usepackage{geometry}
-\geometry{a4paper}
+\documentclass[a4paper,12pt]{article}
 
-\usepackage{fontspec}
-\usepackage{hyperref}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-\usepackage{url}  % do przełamywania url
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont{TeX Gyre Bonum}
+
+% polecenie \includegraphics, dokumentacja „epslatex.pdf”
+\usepackage{graphicx}
+
 \usepackage{polyglossia}
 \setdefaultlanguage{polish}
 
+% przełamywanie url
+\usepackage{url}
+
 \bibliographystyle{unsrt}
 
-\title{Bibliografia do przedmiotu\\,,Środowisko Programisty''}
-\author{Włodzimierz Bzyl}
-\date{20 października 2009}
+\title{Bibliografia}
+\author{Ja}
+\date{28 lutego 2012}
 
 \begin{document}
 \maketitle
@@ -26,7 +29,7 @@
 \section{Podstawy}\label{sec:basics}
 
 W fontach maszynowych, ang. \emph{monospaced fonts},
-wszystkie znaki mają taką samą  szerokość. Za pomocą takich 
+wszystkie znaki mają taką samą  szerokość. Za pomocą takich
 fontów składane są listingi lub kod programów.
 
 \section{Poziom średnio zaawansowany}\label{sec:intermediate}
@@ -40,10 +43,18 @@ DocBookXsl jest ciekawym projektem. Więcej na ten temat
 można poczytać w~\cite{wiki.docbookxsl}.
 
 Do konwersji dokumentu z formatu latex na html najlepszym narzędziem
-jest~\cite[uwaga, system szuka nowego opiekuna]{Gurari.TeX4ht}.
+jest TeX4ht~\cite[uwaga, system szuka nowego opiekuna]{Gurari.TeX4ht}.
 
 O fontach maszynowych już było na stronie~\pageref{sec:basics}.
 
-\bibliography{sp}
+\bibliography{ppn}
 
 \end{document}
+
+
+Kompilacja:
+
+  xelatex article-bibliography
+  bibtex
+  xelatex article-bibliography
+  xelatex article-bibliography

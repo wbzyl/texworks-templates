@@ -1,0 +1,48 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\usepackage{mathpazo}
+
+\setmainfont{TeX Gyre Bonum}
+%\setsansfont{TeX Gyre Heros}
+%\setmonofont{DejaVu Sans Mono}
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{The basics of the \textsf{fontspec} package}
+
+The \textsf{fontspec} package enables automatic font selection
+for \LaTeX{} documents typeset with Xe\TeX{} or Lua\TeX.
+The basic command is
+\begin{center}
+\verb|\fontspec[font features]{font display name}|
+\end{center}
+The default, sans serif, and typewriter fonts may be set with the
+\verb|\setmainfont|, \verb|\setsansfont| and \verb|\setmonofont|
+commands, respectively, as shown in the preamble. They take the
+same syntax as the \verb|\fontspec| package. All expected font
+shapes are available:
+\begin{center}
+  {\itshape Italics and \scshape small caps\dots}\\
+  {\sffamily\bfseries Bold sans serif and \itshape bold italic sans serif\dots}
+\end{center}
+Text fonts in maths mode are also changed (e.g., notice the cosine function in
+$$
+  \cos(n\pi)=\pm 1 \hbox{ dla $n=1$, $2$, \ldots}
+$$
+but only if the roman and sans serif fonts are set in
+the preamble; \verb|\setmainfont| will not affect these maths mode fonts when
+called mid-document.
+Maths symbols themselves are not affected
+$$
+  \int_1^\infty {1\over x^2}\,dx = 1
+$$
+
+Please see the complete \emph{fontspec} documentation for further information.
+
+\end{document}

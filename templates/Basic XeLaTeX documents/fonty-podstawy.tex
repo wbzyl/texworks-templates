@@ -1,0 +1,52 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\usepackage{mathpazo}
+% http://www.gust.org.pl/projects/e-foundry/tex-gyre/
+\setmainfont{TeX Gyre Bonum}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{polish}
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{Podstawy fontologii}
+
+Pakiet \emph{fontspec} ułatwia wybór fontów, które zostaną
+użyte przez program Xe\TeX{} (lub Lua\TeX) w~czasie składu dokumentu.
+
+Dokument ten korzysta z polskich wzorców dzielenia wyrazów.
+
+\bigskip
+
+Notice the font features used to load the default fonts in the preamble.
+The first, \verb|Ligatures=TeX|, enables regular \TeX{} ligatures like
+\verb|,,---''| for ,,---''.
+
+The second, \verb|Scale=MatchLowercase|, automatically scales the fonts to
+the same \emph{x-height}.
+
+\end{document}
+
+% Projekt TeX Gyre:
+%   http://www.gust.org.pl/projects/e-foundry/tex-gyre/
+
+\setmainfont{TeX Gyre Bonum}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}
+
+% Zadanie: Zainstalować font Kurier:
+%
+%   http://jmn.pl/kurier-i-iwona/
+%
+%   fc-cache ~/.fonts
+%   fc-list | egrep Kurier
+
+\setmonofont{Kurier}
+\setmonofont{Kurier Medium}
+\setmonofont{Kurier Heavy}
