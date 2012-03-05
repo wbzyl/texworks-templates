@@ -15,6 +15,8 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{polish}
 
+\renewcommand{\labelitemi}{--}
+
 \title{Otoczenia \LaTeX-owe}
 \date{28.02.2012}
 
@@ -24,13 +26,20 @@
 %\tableofcontents
 %\newpage
 
-\section*{Otoczenia enumerate, itemize}
+\section*{Otoczenia itemize i~enumerate}
 
-Jakiś tekst\ldots
+Jakaś wyliczanka:
+
+\begin{itemize}
+\item Ra, dwa, trzy
+\item Baba Jaga patrzy!
+\end{itemize}
+
 
 \section*{Otoczenie figure}
 
 Więcej tekstu\ldots, jeszcze więcej tekstu\ldots
+
 
 \section*{Otoczenie table, tabular}
 
@@ -45,4 +54,4 @@ Krótkie wstawki ,,verbatim'': \verb|!@#$%^&*|.
 
 Otoczenie center
 Deklaracja \centering
-Polecenie \includegraphicsq
+Polecenie \includegraphics
