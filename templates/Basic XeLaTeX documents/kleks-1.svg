@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640px"
+   height="480px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="kleks-1.svg">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7"
+     inkscape:cx="165.29412"
+     inkscape:cy="240"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="41"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#aa4400;fill-opacity:1;stroke:none"
+       id="path3763"
+       sodipodi:sides="5"
+       sodipodi:cx="120"
+       sodipodi:cy="166.4706"
+       sodipodi:r1="113.85308"
+       sodipodi:r2="160.35645"
+       sodipodi:arg1="0.65010409"
+       sodipodi:arg2="1.2784226"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.18"
+       inkscape:randomized="0.1"
+       d="M 203.70907,244.09328 C 193.5527,258.3147 171.15128,298.28902 156.00001,304.58997 140.84875,310.89093 86.164905,281.97298 69.106252,276.80924 52.0476,271.6455 -13.413628,261.26082 -21.611599,245.21461 -29.809569,229.16841 22.847437,184.87662 22.036666,167.50444 21.225895,150.13226 -23.210936,86.81253 -12.435717,73.444579 -1.6604966,60.076628 55.309118,49.58987 72.519245,44.896319 89.729372,40.202768 147.06466,7.9936682 162.80624,14.718433 c 15.74157,6.724765 41.39662,58.356956 52.97063,72.094747 11.57402,13.73779 49.55182,73.0631 48.95059,90.57582 -0.60123,17.51272 -50.86202,52.48287 -61.01839,66.70428 z"
+       inkscape:transform-center-x="12.964428"
+       inkscape:transform-center-y="7.6463858"
+       transform="matrix(0.99423307,0.10724083,-0.10724083,0.99423307,159.09445,25.95582)"
+       inkscape:export-filename="/home/wbzyl/tmp/texworks-templates/templates/Basic XeLaTeX documents/kleks-1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;stroke:#a46705;stroke-width:1.20000005;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3765"
+       width="294.70587"
+       height="291.76471"
+       x="109.99999"
+       y="55.294117"
+       inkscape:export-filename="/home/wbzyl/tmp/texworks-templates/templates/Basic XeLaTeX documents/kleks-1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
