@@ -43,13 +43,15 @@ $$
   0^\circ \leq t < 360^\circ
 $$
 
-\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+Wykres:
+
+\begin{pspicture}(-3.75,-1.8)(3.75,1.8)
   \psset{xunit=3cm,yunit=3cm}
-  \psaxes[ticks=none,labels=none]{<->}(0,0)(-1.5,-0.75)(1.5,0.75)
+  \psaxes[ticks=none,labels=none]{->}(0,0)(-1.25,-0.6)(1.25,0.6)
   \parametricplot[plotpoints=500,arrows=->,arrowscale=1.5]{0}{360}
     {t cos 1 t sin 2 exp add div t sin t cos mul 1 t sin 2 exp add div}
-  \put(4.25,-0.5){$x$}
-  \put(-0.5,2){$y$}
+  \put(3.45,-0.5){$x$}
+  \put(-0.5,1.6){$y$}
 \end{pspicture}
 
 
