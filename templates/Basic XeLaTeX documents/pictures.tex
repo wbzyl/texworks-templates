@@ -1,0 +1,60 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+
+\setmainfont{DejaVu Serif}
+
+\usepackage{graphicx} % ftp://ftp.tex.ac.uk/tex-archive/info/epslatex.pdf
+
+\usepackage{polyglossia}
+\setdefaultlanguage{polish}
+
+\usepackage[parfill]{parskip}
+
+% http://tug.org/PSTricks
+\usepackage{pstricks,pst-plot,pst-node,pstricks-add}
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{PSTricks}
+
+Lines and circles:
+
+%\begin{figure}[h]
+  \begin{pspicture}(5,5)
+    \psline(1,1)(5,1)(1,4)(1,1)
+    \pscircle[linestyle=dotted](3,2.5){2.5}
+    \pscircle[fillstyle=solid,fillcolor=lightgray](2,2){1}
+  \end{pspicture}
+%  \caption{Odcinki i okręgi\label{fig:linescircles}}
+%\end{figure}
+
+\subsection*{Leminiskata}
+
+Parametryczne równanie leminiskaty:
+$$
+  x = \frac{\cos t}{1+\sin^2 t}\,,\quad 
+  y = \frac{\sin t\cos t}{1+ \sin^2 t}\,,\quad 
+  0^\circ \leq t < 360^\circ
+$$
+
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+  \psset{xunit=3cm,yunit=3cm}
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-1.5,-0.75)(1.5,0.75)
+  \parametricplot[plotpoints=500,arrows=->,arrowscale=1.5]{0}{360}
+    {t cos 1 t sin 2 exp add div t sin t cos mul 1 t sin 2 exp add div}
+  \put(4.25,-0.5){$x$}
+  \put(-0.5,2){$y$}
+\end{pspicture}
+
+
+\end{document}
+
+Intrygujące przykłady:
+
+  ftp://sunsite.icm.edu.pl/pub/CTAN/graphics/pstricks/contrib/pst-solides3d/
