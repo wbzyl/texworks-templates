@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{pstricks,pst-plot} 
+\begin{document}
+
+\psset{xunit=0.3in,yunit=0.3in,runit=0.3in,plotpoints=200,
+       dash=4pt 4pt,linewidth=1.5pt,dotsep=4pt}  
+\begin{pspicture}(0,0)(15,15)  
+\psaxes[linewidth=1pt,labels=none,ticks=none]{->}(0,0)(0,0)(15,15) 
+\uput{1ex}[180](0,14){$x_{t+1}$} 
+\uput{1ex}[270](14,0){$x_t$} 
+\SpecialCoor
+\psplot{0}{15}{4 x 1 add ln mul} 
+  \uput{1.75ex}[240](!15 4 15 1 add ln mul){$\psi(x_t)$} 
+\psline(0,0)(15,15) 
+  \uput{1ex}[180](15,15){$x_{t+1}=x_t$} 
+\def\x{9.34665} 
+  \qdisk(\x,\x){3pt} 
+  \psline[linestyle=dashed](\x,0)(\x,\x) 
+  \uput{1ex}[270](\x,0){$x$} 
+  \uput{1ex}[135](!\x\space 4 \x\space 1 add ln mul){$\psi'(x)<1$}
+\pscustom[linewidth=1.2pt,arrowscale=1.5]{
+   \code{/x 1 def 
+         /y 4 x 1 add ln mul def} 
+      \multido{\i=1+1}{4}{
+          \moveto(!x y) 
+          \psline{->}(!x x)(!x y) \closepath 
+          \psline{->}(!x y)(!y y) \closepath 
+          \code{/x y def 
+                /y 4 x 1 add ln mul def} 
+      } 
+   \code{/x 15 def 
+         /y 4 x 1 add ln mul def} 
+      \multido{\i=1+1}{2}{
+          \moveto(!x y) 
+          \psline{->}(!x x)(!x y) \closepath 
+          \psline{->}(!x y)(!y y) \closepath 
+          \code{/x y def 
+                /y 4 x 1 add ln mul def} 
+      } 
+}
+\end{pspicture} 
+\vspace{1cm}
+
+\begin{pspicture}(0,0)(15,15)  
+\psaxes[linewidth=1pt,labels=none,ticks=none]{->}(0,0)(0,0)(15,15) 
+\uput{1ex}[180](0,14){$x_{t+1}$} 
+\uput{1ex}[270](14,0){$x_t$} 
+\SpecialCoor
+\psplot{0}{11}{2.71828 x 4 div exp 1 sub} 
+  \uput{1.75ex}[180](!11 2.71828 11 4 div exp 1 sub){$\psi(x_t)$}
+\psline(0,0)(15,15) 
+  \uput{1ex}[180](15,15){$x_{t+1}=x_t$} 
+\def\x{9.34665} 
+  \qdisk(\x,\x){3pt} 
+  \psline[linestyle=dashed](\x,0)(\x,\x) 
+  \uput{1ex}[270](\x,0){$x$} 
+  \uput{1ex}[135](!\x\space 2.71828 \x\space 4 div exp 1
+sub){$\psi'(x)>1$} 
+\pscustom[linewidth=1.2pt,arrowscale=1.5]{
+   \code{/x 8.5 def 
+         /y 2.71828 x 4 div exp 1 sub def} 
+      \multido{\i=1+1}{4}{
+          \moveto(!x y) 
+          \psline{->}(!x x)(!x y) \closepath 
+          \psline{->}(!x y)(!y y) \closepath 
+          \code{/x y def 
+                /y 2.71828 x 4 div exp 1 sub def} 
+      } 
+   \code{/x 9.9 def 
+         /y 2.71828 x 4 div exp 1 sub def} 
+      \multido{\i=1+1}{2}{
+          \moveto(!x y) 
+          \psline{->}(!x x)(!x y) \closepath 
+          \psline{->}(!x y)(!y y) \closepath 
+          \code{/x y def 
+                /y 2.71828 x 4 div exp 1 sub def} 
+      } 
+}
+\end{pspicture} 
+
+\end{document}
